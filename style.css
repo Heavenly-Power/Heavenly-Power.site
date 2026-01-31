@@ -1,0 +1,598 @@
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0a0a0f;
+    color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background-color: rgba(10, 10, 15, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 1px solid #1a1a2e;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Oxanium', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Главный экран */
+.hero {
+    padding: 180px 0 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+.primary {
+    background-color: #8a2be2;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #7b1fd1;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+}
+
+.secondary {
+    background-color: transparent;
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+.secondary:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* О команде */
+.about {
+    padding: 100px 0;
+    background-color: #0f0f1a;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.feature p {
+    color: #aaa;
+}
+
+/* Платформы */
+.content {
+    padding: 100px 0;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+
+.tiktok { background: rgba(0, 242, 234, 0.1); color: #00f2ea; }
+.telegram { background: rgba(41, 147, 218, 0.1); color: #2993da; }
+.discord { background: rgba(88, 101, 242, 0.1); color: #5865f2; }
+.twitch { background: rgba(145, 70, 255, 0.1); color: #9146FF; }
+.site { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* Ссылки */
+.links {
+    padding: 100px 0;
+    background-color: #0f0f1a;
+}
+
+.links h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.link-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.link-card span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.link-card small {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Партнерская карточка - СИНИЙ ЦВЕТ */
+.link-card.partner {
+    background: rgba(0, 100, 255, 0.1); /* СИНИЙ вместо зелёного */
+    border-color: rgba(0, 150, 255, 0.3);
+}
+
+.link-card.partner:hover {
+    background: rgba(0, 100, 255, 0.15);
+}
+
+/* Менеджер */
+.manager {
+    padding: 100px 0;
+    background-color: #0a0a0f;
+}
+
+.manager h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.manager .subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.manager-card {
+    background: linear-gradient(135deg, rgba(41, 147, 218, 0.1), rgba(0, 100, 200, 0.1));
+    border-radius: 16px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(41, 147, 218, 0.3);
+}
+
+.manager-icon {
+    background: rgba(41, 147, 218, 0.2);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.manager-icon i {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.manager-info {
+    flex-grow: 1;
+}
+
+.manager-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.manager-info p {
+    color: #aaa;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.manager-btn {
+    background-color: #2993da;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.manager-btn:hover {
+    background-color: #1c7dc2;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(41, 147, 218, 0.3);
+}
+
+.manager-note {
+    margin-top: 20px;
+    color: #666 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Партнер - СИНИЙ ЦВЕТ */
+.partner-section {
+    padding: 100px 0;
+}
+
+.partner-card {
+    background: linear-gradient(135deg, rgba(0, 100, 255, 0.05), rgba(0, 150, 255, 0.05)); /* СИНИЙ */
+    border-radius: 16px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 150, 255, 0.3); /* СИНИЙ */
+}
+
+.partner-logo {
+    background: rgba(0, 100, 255, 0.2); /* СИНИЙ */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0066ff; /* СИНИЙ */
+    font-family: 'Oxanium', sans-serif;
+}
+
+.partner-info {
+    flex-grow: 1;
+}
+
+.partner-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.partner-info p {
+    color: #aaa;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.partner-btn {
+    background-color: #0066ff; /* СИНИЙ */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.partner-btn:hover {
+    background-color: #0052d4; /* Темно-синий */
+    transform: translateY(-3px);
+}
+
+.disclaimer {
+    margin-top: 20px;
+    color: #888 !important;
+    font-size: 0.8rem !important;
+}
+
+/* Подвал */
+footer {
+    background-color: #05050a;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #1a1a2e;
+}
+
+.footer-logo {
+    font-family: 'Oxanium', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo i {
+    color: #ffffff;
+}
+
+footer p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    
+    .manager-card,
+    .partner-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .manager-icon,
+    .partner-logo {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .features,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
